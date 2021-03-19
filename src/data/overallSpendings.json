@@ -1,0 +1,19 @@
+{
+  "overallSpendings": [
+    {
+      "id": "overall",
+      "overallVotes": 7,
+      "overallStakings": 6,
+      "overallProposal": 5,
+      "overallExecutions": 3,
+      "overallBoostings": 4,
+      "overallRedeems": 1,
+      "overallVotesSpending": 191297234953554560,
+      "overallStakingsSpending": 283223303701490300,
+      "overallProposalCreationsSpending": 339739190076288830,
+      "overallExecutionSpending": 72170461000000000,
+      "overallBoostingsSpending": 157595921000000000,
+      "overallRedeemSpending": 6384450000000000
+    }
+  ]
+}

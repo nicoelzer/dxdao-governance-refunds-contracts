@@ -2,8 +2,9 @@
   "name": "dxdao-governance-refunds-contracts",
   "version": "0.0.1",
   "scripts": {
+    "start": "node resetTransactions && node getTransactions && node aggregateTransactions && node calculateReimbursements",
+    "reset": "node resetTransactions && rimraf artifacts && rimraf cache && rimraf coverage && rimraf coverage.json",
     "build": "rimraf artifacts && rimraf cache && npx hardhat compile",
-    "clean": "rimraf artifacts && rimraf cache && rimraf coverage && rimraf coverage.json",
     "deploy:xdai": "hardhat deploy --network xdai",
     "deploy:mainnet": "hardhat deploy --network mainnet"
   },
@@ -19,7 +20,9 @@
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@truffle/hdwallet-provider": "^1.0.36",
     "dotenv": "^8.2.0",
-    "truffle": "^5.1.32"
+    "truffle": "^5.1.32",
+    "lowdb": "^1.0.0",
+    "web3": "^1.2.11"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.1",
