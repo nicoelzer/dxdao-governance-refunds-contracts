@@ -1,0 +1,12 @@
+/node_modules
+/build
+/coverage
+/contracts/.flattened
+/artifacts
+/cache
+
+coverage.json
+yarn.lock
+package-lock.json
+.DS_Store
+.env
