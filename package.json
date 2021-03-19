@@ -2,14 +2,8 @@
   "name": "dxdao-governance-refunds-contracts",
   "version": "0.0.1",
   "scripts": {
-    "coverage": "hardhat coverage",
     "build": "rimraf artifacts && rimraf cache && npx hardhat compile",
-    "lint": "yarn prettier ./test/*.js --check",
-    "lint:fix": "yarn prettier ./test/*.js --write",
     "clean": "rimraf artifacts && rimraf cache && rimraf coverage && rimraf coverage.json",
-    "flatten": "./tasks/flatten.sh",
-    "prettier": "prettier --write contracts/**/*.sol",
-    "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol && ./node_modules/.bin/prettier --write contracts/*.sol",
     "deploy:xdai": "hardhat deploy --network xdai",
     "deploy:mainnet": "hardhat deploy --network mainnet"
   },
