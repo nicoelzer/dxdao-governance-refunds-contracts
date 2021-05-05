@@ -304,6 +304,7 @@ async function fetchGasSpenings() {
         }
 
         for (var i in proposalRedeems.events) {
+
           var receipt = await web3.eth.getTransactionReceipt(
             proposalRedeems.events[i].transactionHash
           );
@@ -312,12 +313,7 @@ async function fetchGasSpenings() {
           );
           var block = await web3.eth.getBlock(proposalRedeems.events[i].blockNumber);
 
-          let from;
-          if(receipt.to != scheme[j].votingMachineAddress){
-            from = receipt.to.toLowerCase();
-          } else {
-            from = receipt.from.toLowerCase();
-          }
+          let from = proposalRedeems.events[i].returnValues._beneficiary;
 
           if(!accountGasSpendingExists({ id: from.toLowerCase() })){
             upsertAccountGasSpending(
