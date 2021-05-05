@@ -6,7 +6,7 @@
     "reset": "node resetTransactions && rimraf artifacts && rimraf cache && rimraf coverage && rimraf coverage.json",
     "build": "rimraf artifacts && rimraf cache && npx hardhat compile",
     "deploy:xdai": "hardhat deploy --network xdai",
-    "deploy:mainnet": "hardhat deploy --network mainnet"
+    "deploy:mainnet": "hardhat deploy --network mainnet --verify"
   },
   "repository": {
     "type": "git",
